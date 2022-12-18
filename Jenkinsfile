@@ -30,8 +30,7 @@ pipeline {
     stage("GITHUB") {
       steps {
         git branch: 'staging',
-          credentialsId: 'gh-jenkins',
-          url: 'https://github.com/vicalmic/lab3.git'
+          url: 'https://github.com/almightydreamer/lab34.git'
       }
     }
 
