@@ -128,7 +128,7 @@ class QuestionIndexViewTests(TestCase):
         response = self.client.get(reverse('polls:index'))
         self.assertQuerysetEqual(
             response.context['latest_question_list'],
-            ['<Question: Past question.>']
+            [<Question: Past question.>]
         )
 
     def test_two_past_questions(self):
