@@ -87,7 +87,7 @@ if os.getenv("DEVELOPMENT_MODE", "False") == "True":
             'NAME': 'django',                      
             'USER': 'postgres',
             'PASSWORD': '123',
-            'HOST': '',
+            'HOST': 'localhost',
             'PORT': '5432',
         }
     }
