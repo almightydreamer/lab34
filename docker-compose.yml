@@ -6,6 +6,8 @@ services:
     environment:
       POSTGRES_PASSWORD: 123
       POSTGRES_DB: django
+    ports:
+      - 5432:5432
     healthcheck:
       test: [ "CMD", "pg_isready", "-q", "-d", "django", "-U", "postgres" ]
       timeout: 45s
