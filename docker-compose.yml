@@ -6,7 +6,7 @@ services:
     ports:
       - 5435:5434
     environment:
-      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     healthcheck:
       test: [ "CMD", "pg_isready", "-q", "-d", "django", "-U", "postgres" ]
@@ -24,7 +24,7 @@ services:
     image: almightydreamer/lab34:latest
     restart: always
     environment:
-      DATABASE_URL: postgres://postgres:postgres@postgres:5435/postgres
+      DATABASE_URL: ${DATABASE_URL}
       DEBUG: ${DEBUG}
       DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS}
     ports:
