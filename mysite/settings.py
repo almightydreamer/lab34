@@ -84,11 +84,11 @@ if os.getenv("DEVELOPMENT_MODE", "False") == "True":
     DATABASES = {
         "default": {
             'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db_name',                      
-        'USER': 'db_user',
-        'PASSWORD': 'db_user_password',
-        'HOST': '',
-        'PORT': 'db_port_number',
+            'NAME': 'django',                      
+            'USER': 'postgres',
+            'PASSWORD': '123',
+            'HOST': '',
+            'PORT': '5432',
         }
     }
 elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
