@@ -4,7 +4,7 @@ services:
     image: postgres:13-bullseye
     restart: always
     environment:
-      POSTGRES_PASSWORD: admin
+      POSTGRES_PASSWORD: 123
       POSTGRES_DB: django
     healthcheck:
       test: [ "CMD", "pg_isready", "-q", "-d", "django", "-U", "postgres" ]
